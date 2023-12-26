@@ -4,6 +4,7 @@ from stable_baselines3 import A2C
 env = gymnasium.make('LunarLander-v2', render_mode='human')  # continuous: LunarLanderContinuous-v2
 env.reset()
 
+# print statistic info in the training process
 model = A2C('MlpPolicy', env, verbose=1)
 model.learn(total_timesteps=100000)
 episodes = 10
